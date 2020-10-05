@@ -3,12 +3,16 @@
 ## Tool for creating true location city map code
 
 To generate true location for cities, a CityMap.xml is used under the YnAMP mod. However, generating such a file and assigning each block while switching back and forth is a painful process. This tool aims to make that process easier. 
-![Map view](/display/tooldisplay3.png)
+
+![Map view](/display/tooldisplay3.jpg?raw=true)
+
 This tool is just a html page that loads up an image that you have placed in the same folder. It creates outlines around each block with input in each block.
 You can enter the city you want for each block in the input field and leave it there. It will be saved automatically.
 
 After you have finished naming everything, click the export to xml button at the bottom of the page, and it will save an xml file with the code needed in CityMap.xml.
-![Map view](/display/tooldisplay4.png)
+
+![Map view](/display/tooldisplay4.jpg?raw=true)
+
 You can also load existing xml or json to work with other people simultaneously. Just paste the code in the textbox under the corresponding buttons and click import.
 
 Feel free to customize the map. Open up the html file and you will see under the `<script>` section, some constant parameters. You can change the size for the map width, height, the map name used in the xml code, etc.
