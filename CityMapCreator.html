@@ -12,12 +12,19 @@
 		<button onclick="saveToLocalStorage()">save json to local storage</button>
 		<button onclick="saveToJsonFile()">save json to local file</button>
 	</div>
-	<div id="export_json" style="height: 240px">
+	<div id="export_json" style="height: 40px">
 	</div>
 	<div id="jiafish">
+		<div>export cities to code to be consumed by CityMap.xml</div>
 		<button onclick="saveXmlToFile()">export to xml</button>
 	</div>
-	<div id="export_xml" style="height: 240px">
+	<div id="export_xml" style="height: 40px">
+	</div>
+	<div id="jiafish2">
+		<div>convert all city names to EN localized text to be consumed by LocalizedText</div>
+		<button onclick="exportTranslationXml()">export to translation xml</button>
+	</div>
+	<div style="height: 40px">
 	</div>
 	<div id="import_xml" style="height: 240px">
 		<button onclick="importXml()">import xml</button>
@@ -192,7 +199,7 @@ function saveXmlToFile() {
 		const x = key.split(",")[0]
 		const y = key.split(",")[1]
 		const originalValue = mappingJson[key]
-		const value = originalValue.toUpperCase().split(" ").join("")
+		const value = originalValue.toUpperCase().split(" ").join("_")
 		if (!value) {
 			continue
 		}
@@ -255,6 +262,35 @@ function importJson() {
 }
 
 const author = "jiafish"
+
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+const delimeter = new RegExp('_| ', 'g')
+function exportTranslationXml() {
+	var text = ''
+	var cityNameObj = {}
+	for (key in mappingJson) {
+		const cityInput = mappingJson[key]
+		console.log('cityInput', cityInput)
+		if (cityInput == "" || cityNameObj[cityInput] != null) {
+			continue
+		}
+		const cityNameRaw = cityInput.toUpperCase().split(" ").join("_")
+		const cityName = cityInput.toLowerCase().split(delimeter).map(capitalize).join(' ')
+		console.log('cityNameRaw', cityNameRaw)
+		console.log('cityName', cityName)
+
+		cityNameObj[cityInput] = cityName
+		const line = `<Replace Tag="LOC_CITY_NAME_${cityNameRaw}" Text="${cityName}" Language="en_US" />\n`
+		text = text + line
+	}
+	console.log('text', text)
+
+	saveToFile(text, FILE_NAME + "GamePlayText.xml", "plain/text")
+}
+
 </script>
 </body>
 </html>
