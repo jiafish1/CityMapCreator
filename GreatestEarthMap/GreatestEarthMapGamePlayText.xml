@@ -1,0 +1,6 @@
+<Replace Tag="LOC_CITY_NAME_TORONTO" Text="Toronto" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_OTTAWA" Text="Ottawa" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_QUEBEC_CITY" Text="Quebec City" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_MONTREAL" Text="Montreal" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_DETROIT" Text="Detroit" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_CHICAGO" Text="Chicago" Language="en_US" />
