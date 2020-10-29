@@ -17,7 +17,7 @@
 <Replace Tag="LOC_CITY_NAME_FUZHOU" Text="Fuzhou" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TAIBEI" Text="Taibei" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TAINAN" Text="Tainan" Language="en_US" />
-<Replace Tag="LOC_CITY_NAME_HONGKONG" Text="Hongkong" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_HONG_KONG" Text="Hong Kong" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SHENZHEN" Text="Shenzhen" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_GUANGZHOU" Text="Guangzhou" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_CHANGSHA" Text="Changsha" Language="en_US" />
@@ -102,6 +102,7 @@
 <Replace Tag="LOC_CITY_NAME_EDINBURGH" Text="Edinburgh" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_GLASGOW" Text="Glasgow" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_DUBLIN" Text="Dublin" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_ARMAGH" Text="Armagh" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BELFAST" Text="Belfast" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_AMSTERDAM" Text="Amsterdam" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_HAMBURG" Text="Hamburg" Language="en_US" />
@@ -118,6 +119,7 @@
 <Replace Tag="LOC_CITY_NAME_BERLIN" Text="Berlin" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_PRAGUE" Text="Prague" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ROME" Text="Rome" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_VATICAN_CITY" Text="Vatican City" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BOLOGNA" Text="Bologna" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_FLORENCE" Text="Florence" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_PISA" Text="Pisa" Language="en_US" />
@@ -246,12 +248,14 @@
 <Replace Tag="LOC_CITY_NAME_ALBUQUERQUE" Text="Albuquerque" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SPARKS" Text="Sparks" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SAN_JUAN" Text="San Juan" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_CAGUANA" Text="Caguana" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SANTO_DOMINGO" Text="Santo Domingo" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_PORT-AU-PRINCE" Text="Port-au-prince" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BOISE" Text="Boise" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_CHARLESTON" Text="Charleston" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_VIRGINIA_BEACH" Text="Virginia Beach" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_LOUISEVILLE" Text="Louiseville" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_CAHOKIA" Text="Cahokia" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MEMPHIS" Text="Memphis" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_JACKSON" Text="Jackson" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_OKLAHOMA_CITY" Text="Oklahoma City" Language="en_US" />
@@ -355,6 +359,7 @@
 <Replace Tag="LOC_CITY_NAME_DAMASCUS" Text="Damascus" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BASRAH" Text="Basrah" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BAGHDAD" Text="Baghdad" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_BABYLON" Text="Babylon" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TEHRAN" Text="Tehran" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ASHGABAT" Text="Ashgabat" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_DUBAI" Text="Dubai" Language="en_US" />
@@ -483,10 +488,10 @@
 <Replace Tag="LOC_CITY_NAME_TEGUCIGALPA" Text="Tegucigalpa" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_EL_SALVADOR" Text="El Salvador" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MANAGUA" Text="Managua" Language="en_US" />
-<Replace Tag="LOC_CITY_NAME_SAN_JOSE" Text="San Jose" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BARRANQUILLA" Text="Barranquilla" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MEDELLÍN" Text="Medellín" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BOGOTA" Text="Bogota" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_HUNZA" Text="Hunza" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_CALIO" Text="Calio" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MARACAIBO" Text="Maracaibo" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_CARACAS" Text="Caracas" Language="en_US" />
@@ -507,6 +512,7 @@
 <Replace Tag="LOC_CITY_NAME_BRASILIA" Text="Brasilia" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BUENOS_AIRES" Text="Buenos Aires" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MONTEVIDEO" Text="Montevideo" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_ROSARIO" Text="Rosario" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_PORT_ALEGRE" Text="Port Alegre" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SANTA_FE" Text="Santa Fe" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SANTIAGO" Text="Santiago" Language="en_US" />
@@ -525,6 +531,7 @@
 <Replace Tag="LOC_CITY_NAME_PALMA" Text="Palma" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_VALENCIA" Text="Valencia" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MURCIA" Text="Murcia" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_GRANADA" Text="Granada" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MALAGA" Text="Malaga" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SEVILLE" Text="Seville" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_LISBON" Text="Lisbon" Language="en_US" />
@@ -532,8 +539,9 @@
 <Replace Tag="LOC_CITY_NAME_BILBAO" Text="Bilbao" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ZARAGOZA" Text="Zaragoza" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MADRID" Text="Madrid" Language="en_US" />
-<Replace Tag="LOC_CITY_NAME_MALTA" Text="Malta" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_VALLETTA" Text="Valletta" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_PLYMOUTH" Text="Plymouth" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_CARDIFF" Text="Cardiff" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SOUTHAMPTON" Text="Southampton" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_CAMBRIDGE" Text="Cambridge" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_LEEDS" Text="Leeds" Language="en_US" />
@@ -544,9 +552,10 @@
 <Replace Tag="LOC_CITY_NAME_CANARY_ISLANDS" Text="Canary Islands" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ALGIERS" Text="Algiers" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TUNIS" Text="Tunis" Language="en_US" />
-<Replace Tag="LOC_CITY_NAME_SFAX" Text="Sfax" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_CARTHAGE" Text="Carthage" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TRIPOLI" Text="Tripoli" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BENGHAZI" Text="Benghazi" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_SFAX" Text="Sfax" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_SOHAG" Text="Sohag" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_LUXOR" Text="Luxor" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ASWAN" Text="Aswan" Language="en_US" />
@@ -557,6 +566,7 @@
 <Replace Tag="LOC_CITY_NAME_NAIROBI" Text="Nairobi" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_KAMPALA" Text="Kampala" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_JUBA" Text="Juba" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_ZANZIBAR" Text="Zanzibar" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_DAR_ES_SALAAM" Text="Dar Es Salaam" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ANTANANARIVO" Text="Antananarivo" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MAHAJANGA" Text="Mahajanga" Language="en_US" />
@@ -605,6 +615,7 @@
 <Replace Tag="LOC_CITY_NAME_OUAGADOUGOU" Text="Ouagadougou" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_PARAKOU" Text="Parakou" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_NIAMEY" Text="Niamey" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_TARUGA" Text="Taruga" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ABUJA" Text="Abuja" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_KANO" Text="Kano" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_N'DJAMENA" Text="N'djamena" Language="en_US" />
@@ -636,14 +647,17 @@
 <Replace Tag="LOC_CITY_NAME_ANKARA" Text="Ankara" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ESKISEHIR" Text="Eskisehir" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_KONYA" Text="Konya" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_HATTUSA" Text="Hattusa" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ANTALYA" Text="Antalya" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MERSIN" Text="Mersin" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ADANA" Text="Adana" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_GAZIANTEP" Text="Gaziantep" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ALEPPO" Text="Aleppo" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_ANTIOCH" Text="Antioch" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_KAYSERI" Text="Kayseri" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_ERBIL" Text="Erbil" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TABRIZ" Text="Tabriz" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_YEREVAN" Text="Yerevan" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_RIYADH" Text="Riyadh" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_MAURITIUS" Text="Mauritius" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_RÉUNION" Text="Réunion" Language="en_US" />
@@ -654,3 +668,14 @@
 <Replace Tag="LOC_CITY_NAME_MAINTIRANO" Text="Maintirano" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_TAOLAGNARO" Text="Taolagnaro" Language="en_US" />
 <Replace Tag="LOC_CITY_NAME_BEIRA" Text="Beira" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_BAHIA_BLANKA" Text="Bahia Blanka" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_LA_VENTA" Text="La Venta" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_MOHENJO_DARO" Text="Mohenjo Daro" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_NAN_MADOL" Text="Nan Madol" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_PRESLAV" Text="Preslav" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_PALENQUE" Text="Palenque" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_AKKAD" Text="Akkad" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_FEZ" Text="Fez" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_NAZCA" Text="Nazca" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_NGAZARGAMU" Text="Ngazargamu" Language="en_US" />
+<Replace Tag="LOC_CITY_NAME_RAPA_NUI" Text="Rapa Nui" Language="en_US" />

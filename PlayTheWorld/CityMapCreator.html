@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="what" style="height: 7680px; width: 13660px; background-image: url(PlayTheWorld.jpg); background-repeat: no-repeat;background-size: cover; position: absolute;">
+</div>
+<div style="position: absolute;">
+	<div id="top_bar" style="height: 160px"></div>
+	<div id="test"></div>
+	<div style="height: 140px"></div>
+	<div>
+		<button onclick="exportToJson()">export to json</button>
+		<button onclick="saveToLocalStorage()">save json to local storage</button>
+		<button onclick="saveToJsonFile()">save json to local file</button>
+	</div>
+	<div id="export_json" style="height: 40px">
+	</div>
+	<div id="jiafish">
+		<div>export cities to code to be consumed by CityMap.xml</div>
+		<button onclick="saveXmlToFile()">export to xml</button>
+	</div>
+	<div id="export_xml" style="height: 40px">
+	</div>
+	<div id="jiafish2">
+		<div>convert all city names to EN localized text to be consumed by LocalizedText</div>
+		<button onclick="exportTranslationXml()">export to translation xml</button>
+	</div>
+	<div style="height: 40px">
+	</div>
+	<div id="import_xml" style="height: 240px">
+		<button onclick="importXml()">import xml</button>
+		<textarea id="import_xml_container" style="width: 600px; height: 200px"></textarea>
+	</div>
+	<div id="import_json" style="height: 240px">
+		<button onclick="importJson()">import json</button>
+		<textarea id="import_json_container" style="width: 600px; height: 200px"></textarea>
+	</div>
+</div>
+<script>
+/*
+Author: jiafish
+*/
+// the in game size of the map
+const MAP_WIDTH = 128
+const MAP_HEIGHT = 80
+// name used in xml code
+const MAP_NAME = "Earth128x80"
+// name of the file being exported
+const FILE_NAME = "PlayTheWorld"
+const jsonName = FILE_NAME + 'mappingJson'
+// the visual height and width of each block in the UI
+const BLOCK_HEIGHT = "92.1px"
+const BLOCK_WIDTH = "106.35px"
+
+
+let mapping = []
+for (var i = 0; i < MAP_HEIGHT; i++) {
+	let row = []
+  	for (var j = 0; j < MAP_WIDTH; j++) {
+		row[j] = ""
+	}
+	mapping[i] = row
+}
+
+var mappingJsonString = localStorage.getItem(jsonName);
+var mappingJson = {}
+if (mappingJsonString) {
+	var mappingJson = JSON.parse(mappingJsonString)
+}
+console.log('mappingJson', mappingJson)
+
+const parentElement = document.getElementById('test');
+var rowElement, colElement, appendChildElement, inputElement;
+
+// Add child elements
+for (var i = 0; i < mapping.length; i++) {
+	let row = mapping[i]
+	rowElement = document.createElement('div');
+	parentElement.appendChild(rowElement)
+	rowElement.style.display = "flex"
+	rowElement.style['flex-direction'] = "row"
+	rowElement.style['width'] = "fit-content"
+	if (i%2 == 0) {
+		rowElement.style['margin-left'] = "46px"
+	}
+
+	for (var j = 0; j < row.length; j++) {
+		inputElement = document.createElement('input');
+		colElement = document.createElement('div');
+		rowElement.appendChild(colElement)
+		const y = MAP_HEIGHT - 1 - i
+		const id = j + "," + y
+		colElement.innerHTML = id
+		// colElement.style.margin = "10px"
+		colElement.style.width = BLOCK_WIDTH
+		colElement.style.height = BLOCK_HEIGHT
+		colElement.style['text-align'] = "center"
+		colElement.style['border-color'] = "red"
+		colElement.style['border-width'] = "1px"
+		colElement.style['border-style'] = "solid"
+		colElement.style['box-sizing'] = "border-box"
+		colElement.style['color'] = "red"
+		// colElement.style['-webkit-text-stroke'] = "0.5px red"
+		// colElement.style['-webkit-text-fill-color'] = "red"
+
+		colElement.y = y
+		colElement.x = j
+		colElement.appendChild(inputElement)
+		inputElement.style['background-color'] = "transparent"
+		inputElement.style['width'] = "80px"
+		inputElement.style['color'] = "black"
+		inputElement.id = id
+		// inputElement.onfocusout="focusOut()"
+		inputElement.addEventListener("focusout", focusOut);
+		
+
+		if (mappingJson != null && mappingJson[id]) {
+			// console.log(id, ' setting value', mappingJson[id])
+			inputElement.value = mappingJson[id]
+		}
+	}
+}
+
+function focusOut(event) {
+	const target = event.target
+	mappingJson[target.id] = target.value
+	saveObjToLocalStorage(mappingJson)
+}
+
+function exportToJson() {
+	const exportLoc = document.getElementById("export_json");
+	exportLoc.innerHTML = JSON.stringify(mappingJson)
+}
+
+function getJson() {
+	var mapping = {}
+	for (var i = 0; i < MAP_HEIGHT; i++) {
+	  	for (var j = 0; j < MAP_WIDTH; j++) {
+	  		const id = j + "," + i
+			const element = document.getElementById(id);
+			const value = element.value
+			
+	  		console.log(id, ' value', value)
+	  		if (value != "") {
+		  		mapping = {
+		  			[id]: value
+		  		}
+	  		}
+	  		
+		}
+	}
+	return mapping
+}
+
+function saveToLocalStorage() {
+	const mapping = getJson()
+
+	// Put the object into storage
+	saveObjToLocalStorage(mapping)
+}
+
+function saveObjToLocalStorage(object) {
+	localStorage.setItem(jsonName, JSON.stringify(object));
+}
+
+function saveToJsonFile() {
+	const mapping = getJson()
+
+	saveToFile(JSON.stringify(mapping), FILE_NAME + ".json", "application/json")
+}
+
+function saveToFile(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
+}
+
+function saveXmlToFile() {
+	var text = ''
+	for (key in mappingJson) {
+		console.log('key', key)
+		const x = key.split(",")[0]
+		const y = key.split(",")[1]
+		const originalValue = mappingJson[key]
+		const value = originalValue.toUpperCase().split(" ").join("_")
+		if (!value) {
+			continue
+		}
+		const line = `<Replace MapName="${MAP_NAME}" X="${x}" Y="${y}" CityLocaleName="LOC_CITY_NAME_${value}" Area="0" />\n`
+		text = text + line
+	}
+	console.log('text', text)
+
+	saveToFile(text, FILE_NAME + "CityMap.xml", "plain/text")
+}
+
+function importXml() {
+	const importContainer = document.getElementById('import_xml_container');
+	const inputXml = importContainer.value
+	const inputMappingJson = convertXmlToDict(inputXml)
+	populateMapWithJson(inputMappingJson)
+	saveObjToLocalStorage(inputMappingJson)
+	mappingJson = inputMappingJson
+}
+
+function convertXmlToDict(inputXml) {
+
+	var mapping = {}
+	const splitXmls = inputXml.split("<Replace")
+	for (index in splitXmls) {
+		const line = splitXmls[index]
+		// console.log('line', splitXmls[index])
+		if (line == '') {
+			continue
+		}
+		const seg = line.split('"')
+		const x = seg[3]
+		const y = seg[5]
+		const city = seg[7].split('LOC_CITY_NAME_')[1]
+		// console.log('x', x)
+		// console.log('y', y)
+		// console.log('city', city)
+		const id = x + ',' + y
+		mapping[id] = city 
+	}
+	console.log('converted mapping', mapping)
+	return mapping
+}
+
+function populateMapWithJson(mapping) {
+	for (key in mapping) {
+
+		const inputElement = document.getElementById(key);
+		inputElement.value = mapping[key]
+	}
+}
+
+function importJson() {
+	const importContainer = document.getElementById('import_json_container');
+	const inputJson = importContainer.value
+	var inputMappingJson = JSON.parse(inputJson)
+	populateMapWithJson(inputMappingJson)
+	saveObjToLocalStorage(inputMappingJson)
+	mappingJson = inputMappingJson
+}
+
+const author = "jiafish"
+
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+const delimeter = new RegExp('_| ', 'g')
+function exportTranslationXml() {
+	var text = ''
+	var cityNameObj = {}
+	for (key in mappingJson) {
+		const cityInput = mappingJson[key]
+		console.log('cityInput', cityInput)
+		if (cityInput == "" || cityNameObj[cityInput] != null) {
+			continue
+		}
+		const cityNameRaw = cityInput.toUpperCase().split(" ").join("_")
+		const cityName = cityInput.toLowerCase().split(delimeter).map(capitalize).join(' ')
+		console.log('cityNameRaw', cityNameRaw)
+		console.log('cityName', cityName)
+
+		cityNameObj[cityInput] = cityName
+		const line = `<Replace Tag="LOC_CITY_NAME_${cityNameRaw}" Text="${cityName}" Language="en_US" />\n`
+		text = text + line
+	}
+	console.log('text', text)
+
+	saveToFile(text, FILE_NAME + "GamePlayText.xml", "plain/text")
+}
+
+</script>
+</body>
+</html>

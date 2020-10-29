@@ -1,0 +1,8 @@
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_GERMANY"		X="68" Y="65" />
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_POLAND"		X="72" Y="64" />
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_MAORI"		X="125"	Y="17" />
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_CANADA"		X="37"	Y="59" />
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_GENEVA"			X="64" Y="60" />
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_TORONTO"			X="35" Y="59" DisabledByCivilization="CIVILIZATION_CANADA"/>
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_AUCKLAND" 		X="126" Y="16" />
+		<Replace MapName="Earth128x80" Civilization="CIVILIZATION_AKKAD"			X="80"	Y="51" />
